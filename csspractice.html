@@ -89,10 +89,25 @@ body {
 .bird {
 	width: 6%;
 	height: 9%;
-	bottom: 35%;
+	bottom: 34%;
 	left: 16%;
 	position: fixed;
 	transform: skewY(-20deg);
+	animation-name: bounce;
+	animation-duration: 0.5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {
+      bottom: 34%;
+    }
+    50% {
+      bottom: 40%;
+    }
+    100% {
+      bottom: 34%;
+    }
 }
 
 .birds {
