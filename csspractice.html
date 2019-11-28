@@ -1,121 +1,245 @@
 <style>
-  body {
-    background:#c6faf1;
-  }
-  .grass {
-	background-color: #91e09b;
-	background-image: linear-gradient(315deg, #91e09b 0%, #233329 74%);
-	width:100%;
-	height:10%;
-	bottom:0px;
-	position:fixed;
-	left:-1%;
-  }
-  
-.circle {
-    background: #9c8b8e;
-    width: 10%;
-    height: 4%;
-    border-radius: 50%;
-    bottom: 5%;
-    left: 52%;
-    position: fixed;
+body {
+	background: linear-gradient(35deg, #CCFFFF, #d8ccff, #CCFFFF);
 }
 
-   .house {
-    bottom: 2%;
-	left:50%;
-    background: #CA6F1E ;
-    width: 30%;
-    height: 37%;
-	position:fixed;
-  }
-	.house-door {
-		bottom: 2%;
-		left: 54%;
-		background: black;
-		width: 8%;
-		height: 28%;
-		position: fixed;
-	}
-	.house-handle {
-    background: gold;
-    width: 2%;
-    height: 2%;
-    border-radius: 50%;
+.grass {
+	background-color: #91e09b;
+	background-image: linear-gradient(315deg, #91e09b 0%, #233329 74%);
+	width: 100%;
+	height: 10%;
+	bottom: 0px;
+	position: fixed;
+	left: -1%;
+}
+
+.circle {
+	background: #9c8b8e;
+	width: 10%;
+	height: 4%;
+	border-radius: 50%;
+	bottom: 5%;
+	left: 52%;
+	position: fixed;
+}
+
+.house {
+	bottom: 2%;
+	left: 50%;
+	background: #CA6F1E;
+	width: 30%;
+	height: 37%;
+	position: fixed;
+}
+
+.house-door {
+	bottom: 2%;
+	left: 54%;
+	background: black;
+	width: 8%;
+	height: 28%;
+	position: fixed;
+}
+
+.house-handle {
+	background: gold;
+	width: 2%;
+	height: 2%;
+	border-radius: 50%;
 	bottom: 19%;
-    left: 55%;
-	position:fixed;
-  }
+	left: 55%;
+	position: fixed;
+}
+
 .house-roof {
-    bottom: 33%;
-    left: 47%;
-    background: Sienna;
-    width: 37%;
-    height: 20%;
-    position: fixed;
-    border-radius: 30% 30% 0% 0%;
+	bottom: 33%;
+	left: 46%;
+	background: Sienna;
+	width: 37%;
+	height: 20%;
+	position: fixed;
+	border-radius: 30% 30% 0% 0%;
 }
+
 .house-window {
-    bottom: 19%;
-    left: 65%;
-    background: black;
-    width: 11%;
-    height: 11%;
-    position: fixed;
+	bottom: 19%;
+	left: 65%;
+	background: black;
+	width: 11%;
+	height: 11%;
+	position: fixed;
 }
-.dog{
-	width:7%;
-	height:13%;
-	bottom:8%;
+
+.dog {
+	width: 7%;
+	height: 13%;
+	bottom: 8%;
 	left: 47%;
 	position: fixed;
 }
-.cat{
-	width:6%;
-	height:9%;
-	bottom:7%;
+
+.cat {
+	width: 6%;
+	height: 9%;
+	bottom: 7%;
 	left: 33%;
 	position: fixed;
 }
 
-.bird{
-	width:6%;
-	height:9%;
-	bottom:34%;
+.bird {
+	width: 6%;
+	height: 9%;
+	bottom: 35%;
 	left: 16%;
+	position: fixed;
+	transform: skewY(-20deg);
+}
+
+.birds {
+	width: 16%;
+	height: 19%;
+	position: fixed;
+	z-index: 5;
+	transform: skewY(-10deg);
+	animation-name: fly;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes fly {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	50% {
+		left: 50%;
+		top: 30%;
+	}
+	100% {
+		left: 100%;
+		top: 30%;
+	}
+}
+
+.tree {
+	bottom: 2%;
+	left: 4%;
+	z-index: 6;
+	background-color: #ba9a8e;
+	background-image: linear-gradient(315deg, #ba9a8e 0%, #96705b 74%);
+	width: 6%;
+	height: 68%;
 	position: fixed;
 }
 
-.tree{
-		bottom: 2%;
-		left: 4%;
-		background-color: #ba9a8e;
-		background-image: linear-gradient(315deg, #ba9a8e 0%, #96705b 74%);
-		width: 6%;
-		height: 68%;
-		position: fixed;
-}
 .tree-canopy {
-    bottom: 53%;
-    left: -7%;
-    background: green;
-    width: 30%;
-    height: 26%;
-    position: fixed;
-    border-radius: 30% 30% 30% 30%;
+	bottom: 53%;
+	left: -7%;
+	z-index: 6;
+	background: #113b22;
+	width: 30%;
+	height: 26%;
+	position: fixed;
+	border-radius: 30% 30% 30% 30%;
+	animation-name: canopy;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
 }
-.tree-branch{
-    bottom: 33%;
-    left: 7%;
-		background-color: #ba9a8e;
-		background-image: linear-gradient(315deg, #ba9a8e 0%, #96705b 74%);
-    width: 21%;
-    height: 2%;
-    position: fixed;
+
+@keyframes canopy {
+	0% {
+		background-color: #113b22;
+	}
+	50% {
+		background-color: #aaf2c7;
+	}
+	100% {
+		background-color: #113b22;
+	}
+}
+
+.tree-branch {
+	bottom: 33%;
+	left: 7%;
+	background-color: #ba9a8e;
+	background-image: linear-gradient(315deg, #ba9a8e 0%, #96705b 74%);
+	width: 21%;
+	height: 2%;
+	position: fixed;
 	-webkit-transform: skewX(-55deg);
+	transform: skewY(-20deg);
 }
-  
+
+.plaque {
+	border-radius: 20px;
+	bottom: 19%;
+	left: 89%;
+	width: 8%;
+	height: 25%;
+	position: fixed;
+	background: repeating-linear-gradient( 45deg, yellow 0px, yellow 20px, black 20px, black 40px);
+}
+
+.stage {
+	border-radius: 20px;
+	bottom: 9%;
+	left: 92.5%;
+	width: 1%;
+	height: 25%;
+	position: fixed;
+	background: black;
+}
+
+.stars {
+	background-color: white;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	position: fixed;
+	animation-iteration-count: infinite;
+}
+
+.star-1 {
+	top: 15%;
+	left: 60%;
+	animation-duration: 1s;
+	animation-name: twinkle;
+}
+
+.star-2 {
+	top: 7%;
+	left: 71%;
+	animation-duration: 1s;
+	animation-name: twinkle;
+}
+
+@keyframes twinkle {
+	20% {
+		transform: scale(0.5);
+		opacity: 0.5;
+	}
+}
+
+.sun {
+	background-color: yellow;
+	height: 30%;
+	width: 20%;
+	border-radius: 50%;
+	position: fixed;
+	animation-iteration-count: infinite;
+	top: 1%;
+	right: 5%;
+	animation-duration: 15s;
+	animation-name: suns;
+}
+
+@keyframes suns {
+	95% {
+		transform: scale(2);
+		opacity: 0.5;
+	}
+}
+
 
 </style>
 <div class="house">
@@ -136,6 +260,7 @@
 </div>
 <img class="dog" src="dog.png">
 <img class="bird" src="bird.png">
+<img class="birds" src="birds.png">
 <img class="cat" src="cat.png" >
 <div class="tree">
 	<div class="tree-canopy">
@@ -143,4 +268,12 @@
 	<div class="tree-branch">
 	</div>
 </div>
+<div class="stage">
+</div>
+<div class="plaque">
+</div>
+<div class="star-1 stars"></div>
+<div class="star-2 stars"></div>
+<div class="sun"></div>
+
 
