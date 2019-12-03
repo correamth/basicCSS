@@ -2,6 +2,24 @@
 body {
 	background: linear-gradient(35deg, #CCFFFF, #d8ccff, #CCFFFF);
 	margin:0px! important;
+	animation-name: night;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes night {
+    25% {
+    background: linear-gradient(35deg, #df9b60, #b5b24f, #7d5043);
+    }
+    50% {
+    background: linear-gradient(35deg, #625db1, #474747, #43737d);
+    }
+    51% {
+background: linear-gradient(35deg, #020024, #212028, #43737d);
+    }
+    100% {
+     background: linear-gradient(35deg, #CCFFFF, #d8ccff, #CCFFFF);
+    }
 }
 
 .grass {
@@ -104,6 +122,7 @@ body {
     }
     50% {
       bottom: 40%;
+	animation-timing-function:ease-in;
     }
     100% {
       bottom: 34%;
@@ -239,6 +258,7 @@ body {
 	background-color: yellow;
 	height: 30%;
 	width: 20%;
+	z-index: -6;
 	border-radius: 50%;
 	position: fixed;
 	animation-iteration-count: infinite;
@@ -249,9 +269,17 @@ body {
 }
 
 @keyframes suns {
-	95% {
+	25% {
 		transform: scale(2);
 		opacity: 0.5;
+	}
+	50% {
+		transform: scale(0.2);
+		top: 100%;
+	}
+	60% {
+	transform: scale(0.2);
+	top: 100%;
 	}
 }
 
