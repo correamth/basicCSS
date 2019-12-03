@@ -3,7 +3,7 @@ body {
 	background: linear-gradient(35deg, #CCFFFF, #d8ccff, #CCFFFF);
 	margin:0px! important;
 	animation-name: night;
-	animation-duration: 15s;
+	animation-duration: 25s;
 	animation-iteration-count: infinite;
 }
 
@@ -264,7 +264,7 @@ background: linear-gradient(35deg, #020024, #212028, #43737d);
 	animation-iteration-count: infinite;
 	top: 1%;
 	right: 5%;
-	animation-duration: 15s;
+	animation-duration: 25s;
 	animation-name: suns;
 }
 
@@ -293,14 +293,18 @@ background: linear-gradient(35deg, #020024, #212028, #43737d);
 	animation-iteration-count: infinite;
 	top: 100%;
 	left: 5%;
-	animation-duration: 15s;
+	animation-duration: 25s;
 	animation-name: moons;
 }
 
 @keyframes moons {
-	70% {
+	68% {
 		transform: scale(1);
 		top: 1%;
+	}
+	69% {
+		transform: scale(0.7);
+		top: 95%;
 	}
 }
 
