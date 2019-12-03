@@ -282,6 +282,27 @@ background: linear-gradient(35deg, #020024, #212028, #43737d);
 	top: 100%;
 	}
 }
+	
+.moon {
+	background-color: white;
+	height: 30%;
+	width: 20%;
+	z-index: -6;
+	border-radius: 50%;
+	position: fixed;
+	animation-iteration-count: infinite;
+	top: 100%;
+	left: 5%;
+	animation-duration: 15s;
+	animation-name: moons;
+}
+
+@keyframes moons {
+	70% {
+		transform: scale(1);
+		top: 1%;
+	}
+}
 
 
 </style>
@@ -318,5 +339,5 @@ background: linear-gradient(35deg, #020024, #212028, #43737d);
 <div class="star-1 stars"></div>
 <div class="star-2 stars"></div>
 <div class="sun"></div>
-
+<div class="moon"></div>
 
