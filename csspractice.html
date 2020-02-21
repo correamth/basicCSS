@@ -345,10 +345,10 @@ background: linear-gradient(35deg, #020024, #212028, #43737d);
 </div>
 <div class="circle" style="bottom: 0%;left: 49%;">
 </div>
-<img class="dog" src="dog.png">
-<img class="bird" src="bird.png">
+<img id="dog" onClick="animalSounds(this.id)" class="dog" src="dog.png">
+<img id="bird" onClick="animalSounds(this.id)" class="bird" src="bird.png">
 <img class="birds" src="birds.png">
-<img class="cat" src="cat.png" >
+<img id="cat" onClick="animalSounds(this.id)" class="cat" src="cat.png" >
 <div class="tree">
 	<div class="tree-canopy">
 	</div>
@@ -364,3 +364,27 @@ background: linear-gradient(35deg, #020024, #212028, #43737d);
 <div class="sun"></div>
 <div class="moon"></div>
 
+<script>
+const id = elemento => document.getElementById(elemento); 
+
+function animalSounds(id){ 
+	switch(id) { 
+	   case "cat": { 
+		  console.log("meow-meow"); 
+		  break; 
+	   } 
+	   case "dog": { 
+		  console.log("woof-woof"); 
+		  break; 
+	   }
+	   case "bird": { 
+		  console.log("tweet-tweet"); 
+		  break;    
+	   }   
+	   default: { 
+		  console.log("Invalid choice"); 
+		  break;              
+	   } 
+	} 
+}
+</script>
