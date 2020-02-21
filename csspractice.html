@@ -415,12 +415,13 @@ function fase(id) {
             console.log("voce encontrou o passaro")
             find = "reset";
             console.log("agora voce passou de fase")
+			 setTimeout(function() {
+			  window.location.href = "https://correamth.github.io/TCC/dashboard.html";
+			 }, 4500);
         } else {
             console.log("encontre o passaro")
         }
-    } else {
-        window.location.href = "https://correamth.github.io/TCC/dashboard.html";
-    }
+    } 
 }
 fase()
 
