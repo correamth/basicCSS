@@ -368,6 +368,7 @@ background: linear-gradient(35deg, #020024, #212028, #43737d);
 const id = elemento => document.getElementById(elemento); 
 
 function animalSounds(id){ 
+console.log(id)
 	switch(id) { 
 	   case "cat": { 
 		  console.log("meow-meow"); 
@@ -387,4 +388,40 @@ function animalSounds(id){
 	   } 
 	} 
 }
+
+var find = "dog";
+
+function fase(id) {
+
+    if (find == "dog") {
+        if (id == 'dog') {
+            console.log("voce encontrou o cachorro")
+            find = "cat";
+            console.log("agora encontre o gato")
+
+        } else {
+            console.log("encontre o cachorro")
+        }
+    } else if (find == "cat") {
+        if (id == 'cat') {
+            console.log("voce encontrou o gato")
+            find = "bird";
+            console.log("agora encontre o passaro")
+        } else {
+            console.log("encontre o gato")
+        }
+    } else if (find == "bird") {
+        if (id == 'bird') {
+            console.log("voce encontrou o passaro")
+            find = "reset";
+            console.log("agora voce passou de fase")
+        } else {
+            console.log("encontre o passaro")
+        }
+    } else {
+        window.location.href = "https://correamth.github.io/TCC/dashboard.html";
+    }
+}
+fase()
+
 </script>
